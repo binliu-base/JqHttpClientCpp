@@ -1,4 +1,18 @@
-# 1. 环境准备
+## 聚宽数据Http服务 客户端C++接口示例
+
+<!-- TOC -->
+
+- [聚宽数据Http服务 C++接口示例](##聚宽数据Http服务 客户端C++接口示例)
+    - [环境准备](#环境准备)
+    - [获取token示例](##获取token示例)
+    - [获取标的信息示例](##获取标的信息示例)
+    - [读写标的信息到CSV文件示例](##读写标的信息到CSV文件示例)
+    - [完整代码示例](##完整代码示例) 
+
+<!-- /TOC -->
+
+
+## 1. 环境准备
 
 配置Visual Studio 2017 使用微软的C++ REST SDK, 具体过程请参考此文档  https://github.com/Microsoft/cpprestsdk
 
@@ -13,9 +27,7 @@ using namespace std;
 using namespace jq_cpp_client;
 ```
 
-# 3 获取 token 示例
-
-下便是JqData提供的源代码，最终`token`的结果会由代码`result.Content.ReadAsStringAsync().Result;`返回。
+## 3 获取token示例
 
 ```c++
 const std::string url = "https://dataapi.joinquant.com/apis"; // JqData 接口地址
@@ -44,7 +56,7 @@ string token = client.get_token(url, mob, pwd);
 
 
 
-# 4 获取标的信息示例
+## 4 获取标的信息示例
 
 ```c++
 	string security_info = client.get_price(string("502050.XSHG"));
@@ -62,7 +74,7 @@ string token = client.get_token(url, mob, pwd);
 | 返回值    | 字符串格式标的信息 |
 
 
-# 标的信息读写CSV文件示例
+## 5 读写标的信息到CSV文件示例
 
 由于CSV文件是一种按逗号分隔的文本格式，所以，JqData返回的标的信息符合这种要求，可以直接以文本的格式写入CSV文件中。
 
@@ -125,7 +137,7 @@ static string  read_csv(string filename)
 先用有管理员权限的用户打开一个控制台， 输入chcp 65001，这样把当前控制台的字符集临时改为UTF-8.
 
 
-# 完整代码示例
+## 6 完整代码示例
 
 ```c++
 #include "stdafx.h"
