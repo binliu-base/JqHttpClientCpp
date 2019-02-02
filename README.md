@@ -2,20 +2,20 @@
 
 <!-- TOC -->
 
-- [聚宽数据Http服务客户端C++接口示例](# 聚宽数据Http服务客户端C++接口示例)
-    - [环境准备](##环境准备)
-    - [获取token示例](##获取token示例)
-    - [获取标的信息示例](##获取标的信息示例)
-    - [读写标的信息到CSV文件示例](##读写标的信息到CSV文件示例)
-    - [完整代码示例](##完整代码示例) 
+- [聚宽数据Http服务客户端C++接口示例](#聚宽数据Http服务客户端C++接口示例)
+    - [环境准备](#环境准备)
+    - [获取token示例](#获取token示例)
+    - [获取标的信息示例](#获取标的信息示例)
+    - [读写标的信息到CSV文件示例](#读写标的信息到CSV文件示例)
+    - [完整代码示例](#完整代码示例) 
 
 <!-- /TOC -->
 
-## 1. 环境准备
+### 1. 环境准备
 
 配置Visual Studio 2017 使用微软的C++ REST SDK, 具体过程请参考此文档  https://github.com/Microsoft/cpprestsdk.
 
-## 2. 建立一个空的【控制台应用程序】, 引用以下头文件和命名空间： 
+### 2. 建立一个空的【控制台应用程序】, 引用以下头文件和命名空间： 
 
 ```c++
 #include "stdafx.h"
@@ -26,7 +26,7 @@ using namespace std;
 using namespace jq_cpp_client;
 ```
 
-## 3. 获取token示例
+### 3. 获取token示例
 
 ```c++
 const std::string url = "https://dataapi.joinquant.com/apis"; // JqData 接口地址
@@ -55,7 +55,7 @@ string token = client.get_token(url, mob, pwd);
 
 
 
-## 4. 获取标的信息示例
+### 4. 获取标的信息示例
 
 ```c++
 	string security_info = client.get_price(string("502050.XSHG"));
@@ -73,7 +73,7 @@ string token = client.get_token(url, mob, pwd);
 | 返回值    | 字符串格式标的信息 |
 
 
-## 5. 读写标的信息到CSV文件示例
+### 5. 读写标的信息到CSV文件示例
 
 由于CSV文件是一种按逗号分隔的文本格式，所以，JqData返回的标的信息符合这种要求，可以直接以文本的格式写入CSV文件中。
 
@@ -131,12 +131,12 @@ static string  read_csv(string filename)
 | filename | 参数 保存的文件名称，也就是文件地址，后缀必须是csv格式 |
 
 
-### 建议：
+#### 建议：
 在我运行的Windows 10环境， Visual Studio 17 项目默认字符集是"使用Unicode字符集" (代码页 65001)， 而Windowns 控制台默认字符集是GBK (代码页 936), 因此控制台显示的中文字符是乱码。 解决方法如下：
 先用有管理员权限的用户打开一个控制台， 输入chcp 65001，这样把当前控制台的字符集临时改为UTF-8.
 
 
-## 6. 完整代码示例
+### 6. 完整代码示例
 
 ```c++
 #include "stdafx.h"
