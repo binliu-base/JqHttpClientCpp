@@ -16,7 +16,7 @@
 
 配置Visual Studio 2017 使用微软的C++ REST SDK, 具体过程请参考此文档  https://github.com/Microsoft/cpprestsdk
 
-# 2. 建立一个空的【控制台应用程序】, 引用以下头文件和命名空间：
+## 2. 建立一个空的【控制台应用程序】, 引用以下头文件和命名空间：
 
 ```c++
 #include "stdafx.h"
