@@ -1,8 +1,8 @@
-## 聚宽数据Http服务 客户端C++接口示例
+## 聚宽数据Http服务客户端C++接口示例
 
 <!-- TOC -->
 
-- [聚宽数据Http服务 C++接口示例](##聚宽数据Http服务 客户端C++接口示例)
+- [聚宽数据Http服务客户端C++接口示例](##  聚宽数据Http服务客户端C++接口示例)
     - [环境准备](#环境准备)
     - [获取token示例](##获取token示例)
     - [获取标的信息示例](##获取标的信息示例)
@@ -14,7 +14,7 @@
 
 ## 1. 环境准备
 
-配置Visual Studio 2017 使用微软的C++ REST SDK, 具体过程请参考此文档  https://github.com/Microsoft/cpprestsdk
+配置Visual Studio 2017 使用微软的C++ REST SDK, 具体过程请参考此文档  https://github.com/Microsoft/cpprestsdk.
 
 ## 2. 建立一个空的【控制台应用程序】, 引用以下头文件和命名空间： 
 
