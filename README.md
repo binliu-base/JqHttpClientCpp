@@ -154,7 +154,7 @@ namespace  jq_cpp_client
 	class CJoinQuantCPP
 	{
 	public:
-		CJoinQuantCPP(string url) :m_client(utility::conversions::to_utf16string(url)) {};
+		CJoinQuantCPP(string url) :m_client(utility::conversions::to_utf16string(url)) {};    
 		CJoinQuantCPP() : m_client(L"https://dataapi.joinquant.com/apis") {};
 		~CJoinQuantCPP() {};
 
