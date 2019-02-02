@@ -151,8 +151,6 @@ namespace  jq_cpp_client
 	using namespace web::http;                  // Common HTTP functionality
 	using namespace web::http::client;          // HTTP client features
 
-#define VERIFY_IS_TRUE(expression, ...) CHECK_EQUAL(true, expression, ##__VA_ARGS__)
-
 	class CJoinQuantCPP
 	{
 	public:
